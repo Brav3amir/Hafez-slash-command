@@ -1,0 +1,30 @@
+const { SlashCommandBuilder } = require("@discordjs/builders");
+const { MessageEmbed } = require("discord.js");
+const { client } = require("../../index.js");
+
+module.exports = {
+  data: new SlashCommandBuilder()
+    .setName("slash")
+    .setDescription("slash-handler Test Command")
+    .addSubcommand((subcommand) =>
+      subcommand
+        .setName("guildcreate")
+        .setDescription("emits guildCreate")
+        .addStringOption((option) =>
+          option.setName("id").setDescription("id of the server")
+        )
+    )
+    .addSubcommand((subcommand) =>
+      subcommand
+        .setName("ready")
+        .setDescription("emits ready")
+        .addBooleanOption((option) =>
+          option.setName("bloom").setDescription("bloom")
+        )
+    ),
+  run: async (interaction) => {
+    console.log(interaction);
+    client.emit("guildCreate", interaction.options.getString("id"));
+    interaction.reply({ content: "done", ephemeral: true });
+  },
+};

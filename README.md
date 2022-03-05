@@ -3,7 +3,7 @@
 
 ## 🚀 Getting Started
 
-After installation finishes you can use `node index.js` or `npm start` to start the bot
+After installation finishes you can use `node index.js` or `node .` to start the bot
 
 ## 🤝 Contributing
 

@@ -7,7 +7,7 @@ After installation finishes you can use `node index.js` or `node .` to start the
 
 ## 🤝 Contributing
 
-1. [Fork the repository](https://github.com/im-parsa/hafez-bot/fork)
+1. [Fork the repository](https://github.com/Brav3amir/Hafez-slash-command/fork)
 2. Clone your fork: `git clone https://github.com/your-username/Hafez-slash-command.git`
 3. Create your feature branch: `git checkout -b my-new-feature`
 4. Commit your changes: `git commit -am 'Add some feature'`

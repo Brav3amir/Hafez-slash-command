@@ -43,67 +43,67 @@ module.exports = {
     //   .readdirSync("../commands")
     //   .filter((file) => file.endsWith(".js"));
 
-    if (message.content.startsWith("?fal"))
-      message.reply({
-        embeds: [{ description: txt, color: "#fffff0" }],
-        components: [row],
-        ephemeral: true,
-      });
+//     if (message.content.startsWith("?fal"))
+//       message.reply({
+//         embeds: [{ description: txt, color: "#fffff0" }],
+//         components: [row],
+//         ephemeral: true,
+//       });
 
-      if (message.content.startsWith("?ghazal"))
-      message.reply({
-        embeds: [{ description: txt, color: "#fffff0" }],
-        components: [row],
-        ephemeral: true,
-      });
+//       if (message.content.startsWith("?ghazal"))
+//       message.reply({
+//         embeds: [{ description: txt, color: "#fffff0" }],
+//         components: [row],
+//         ephemeral: true,
+//       });
 
-      if (message.content.startsWith("?bio"))
-      message.reply({
-        embeds: [{ description: txt, color: "#fffff0" }],
-        components: [row],
-        ephemeral: true,
-      });
+//       if (message.content.startsWith("?bio"))
+//       message.reply({
+//         embeds: [{ description: txt, color: "#fffff0" }],
+//         components: [row],
+//         ephemeral: true,
+//       });
 
-      if (message.content.startsWith("?botinfo"))
-      message.reply({
-        embeds: [{ description: txt, color: "#fffff0" }],
-        components: [row],
-        ephemeral: true,
-      });
+//       if (message.content.startsWith("?botinfo"))
+//       message.reply({
+//         embeds: [{ description: txt, color: "#fffff0" }],
+//         components: [row],
+//         ephemeral: true,
+//       });
 
-      if (message.content.startsWith("?help"))
-      message.reply({
-        embeds: [{ description: txt, color: "#fffff0" }],
-        components: [row],
-        ephemeral: true,
-      });
+//       if (message.content.startsWith("?help"))
+//       message.reply({
+//         embeds: [{ description: txt, color: "#fffff0" }],
+//         components: [row],
+//         ephemeral: true,
+//       });
 
-      if (message.content.startsWith("?invite"))
-      message.reply({
-        embeds: [{ description: txt, color: "#fffff0" }],
-        components: [row],
-        ephemeral: true,
-      });
+//       if (message.content.startsWith("?invite"))
+//       message.reply({
+//         embeds: [{ description: txt, color: "#fffff0" }],
+//         components: [row],
+//         ephemeral: true,
+//       });
 
-      if (message.content.startsWith("?language"))
-      message.reply({
-        embeds: [{ description: txt, color: "#fffff0" }],
-        components: [row],
-        ephemeral: true,
-      });
+//       if (message.content.startsWith("?language"))
+//       message.reply({
+//         embeds: [{ description: txt, color: "#fffff0" }],
+//         components: [row],
+//         ephemeral: true,
+//       });
 
-      if (message.content.startsWith("?pic"))
-      message.reply({
-        embeds: [{ description: txt, color: "#fffff0" }],
-        components: [row],
-        ephemeral: true,
-      });
+//       if (message.content.startsWith("?pic"))
+//       message.reply({
+//         embeds: [{ description: txt, color: "#fffff0" }],
+//         components: [row],
+//         ephemeral: true,
+//       });
 
-      if (message.content.startsWith("?invite"))
-      message.reply({
-        embeds: [{ description: txt, color: "#fffff0" }],
-        components: [row],
-        ephemeral: true,
-      });
+//       if (message.content.startsWith("?invite"))
+//       message.reply({
+//         embeds: [{ description: txt, color: "#fffff0" }],
+//         components: [row],
+//         ephemeral: true,
+//       });
   },
 };

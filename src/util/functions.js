@@ -1,5 +1,6 @@
 const fs = require("fs");
 const jsonEditor = require("edit-json-file");
+
 module.exports = {
   create: function create(seed, data, options) {
     if (fs.existsSync(`./db/server/${seed}.json`)) return;

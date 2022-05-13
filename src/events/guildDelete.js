@@ -13,6 +13,7 @@ module.exports = {
       "https://cdn.discordapp.com/attachments/916778395558371338/916792163206037504/unnamed.png";
 
     const webhookClient2 = Webhooks[1];
+    
     const webhookClient1 = Webhooks[2];
 
     webhookClient2.send({

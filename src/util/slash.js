@@ -34,5 +34,4 @@ const slash = {
   },
 };
 
-
 module.exports = slash;

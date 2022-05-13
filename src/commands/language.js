@@ -47,6 +47,7 @@ module.exports = {
     delete require.cache[
       require.resolve(`../../db/server/${interaction.guild.id}.json`)
     ];
+    
     interaction.db =
       await require(`../../db/server/${interaction.guild.id}.json`);
     await sleep();

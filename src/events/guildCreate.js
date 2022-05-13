@@ -14,6 +14,7 @@ module.exports = {
       "https://cdn.discordapp.com/attachments/916778395558371338/916792163206037504/unnamed.png";
 
     const joinguildpv = Webhooks[1];
+    
     const joinguild = Webhooks[2];
 
     joinguildpv.send({

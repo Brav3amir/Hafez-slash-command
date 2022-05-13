@@ -5,6 +5,7 @@ module.exports = {
   data: new SlashCommandBuilder()
     .setName("stats")
     .setDescription("Fal Hafez stats"),
+  
   run: async (interaction) => {
     let totalSeconds = client.uptime / 1000;
     let days = Math.round(totalSeconds / 86400);

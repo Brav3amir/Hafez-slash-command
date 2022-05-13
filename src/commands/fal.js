@@ -121,6 +121,7 @@ module.exports = {
         ],
       });
     } else if (interaction.db.language === "fa") {
+      
       await interaction.editReply({
         embeds: [
           {

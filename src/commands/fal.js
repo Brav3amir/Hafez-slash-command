@@ -13,6 +13,7 @@ module.exports = {
     let getInfo = async () => {
       let response = await axios.get(`https://api.falehafez.org/`);
       let info = response.data;
+      
       return info;
     };
     let data = await getInfo();

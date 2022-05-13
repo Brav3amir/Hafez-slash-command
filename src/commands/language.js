@@ -14,6 +14,7 @@ module.exports = {
         .addChoice("Persian", "fa")
         .setRequired(true)
     ),
+  
   run: async (interaction) => {
     const option = interaction.options._hoistedOptions[0];
     const sleep = (ms = 2000) => new Promise((r) => setTimeout(r, ms));

@@ -7,7 +7,6 @@ module.exports = {
     .setDescription("help command"),
   run: async (interaction) => {
     const p = "/";
-
     if (interaction.db.language === "en") {
       interaction.reply({
         embeds: [
@@ -38,7 +37,7 @@ module.exports = {
         ],
       });
     }
-
+    
     let current = interaction.db.usage?.help || 0;
     db.set(interaction.guild.id, "usage.help", current + 1);
   },

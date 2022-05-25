@@ -5,6 +5,7 @@ module.exports = {
   data: new SlashCommandBuilder()
     .setName("help")
     .setDescription("help command"),
+  
   run: async (interaction) => {
     const p = "/";
     if (interaction.db.language === "en") {

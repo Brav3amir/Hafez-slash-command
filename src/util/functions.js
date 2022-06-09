@@ -15,6 +15,7 @@ module.exports = {
       }
     );
   },
+  
   set: async (seed, name, value) => {
     if (!fs.existsSync(`./db/server/${seed}.json`)) this.create(seed);
     let file = jsonEditor(`./db/server/${seed}.json`);

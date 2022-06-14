@@ -3,6 +3,7 @@ const ora = require("ora");
 const config = require("./config");
 const fs = require("fs");
 
+
 require("dotenv").config();
 
 // Slash Commands

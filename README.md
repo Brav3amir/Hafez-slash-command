@@ -1,9 +1,18 @@
+- [Hafez Bot (Discord Bot)](#hafez-bot-discord-bot)
+  - [🚀 Getting Started](#-getting-started)
+  - [🤝 Contributing](#-contributing)
+
 # Hafez Bot (Discord Bot)
 > Just simple discord bot built with discord.js [discordjs.guide](https://discordjs.guide)
 
 ## 🚀 Getting Started
 
-After installation finishes you can use `node index.js` or `node .` to start the bot
+- Clone This Repository `git clone https://github.com/Brav3amir/Hafez-slash-command`
+- then `cd Hafez-slash-command`
+- install node modules `npm i`
+- create an `.env` file
+- enter your bot token
+- After installation finishes you can use `node index.js` or `node .` to start the bot
 
 ## 🤝 Contributing
 

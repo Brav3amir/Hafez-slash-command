@@ -11,7 +11,7 @@ module.exports = {
     await interaction.deferReply();
 
     let getInfo = async () => {
-      let response = await axios.get(`https://api.falehafez.org/`);
+      let response = await axios.post(`https://ludho.xyz/api?fal`, {}, { headers: {'api-key':"c816aefcece3f82a1204"}});
       let info = response.data;
       
       return info;
@@ -21,54 +21,10 @@ module.exports = {
     let explanation = `${data.explanation}`;
 
     // * STARTS HERE
-    let poemEx = await data.poem[0];
+    let number = data.number;
+    let address = data.address;
 
-    const response = await fetch(
-      `https://ganjoor.net/search?s=${encodeURI(poemEx)}&author=2`
-    );
-    const body = await response.text();
 
-    const dom = new JSDOM(body);
-    const doc = dom.window.document;
-    let para = doc
-      .getElementsByClassName("sit")
-      [doc.getElementsByClassName("sit").length - 1].getElementsByTagName("p");
-    let address =
-      "https://ganjoor.net/" +
-      encodeURI(para[para.length - 1].getElementsByTagName("a")[0].href);
-
-    // !                        Fal Number!
-    const number = address
-      .split("/")
-      [address.split("/").length - 1].split("sh")[1];
-
-    const response2 = await fetch(address);
-    const body2 = await response2.text();
-    const dom2 = new JSDOM(body2);
-    const doc2 = dom2.window.document;
-
-    let images = doc2.getElementsByClassName("related-image-container");
-    const randomImage = Math.floor(Math.random() * images.length + 1);
-
-    let audios = doc2.getElementsByClassName("audio-player");
-    const randomAudio = Math.floor(Math.random() * audios.length + 1);
-
-    // !                        Fal Image!
-    let imageLink = images[0]
-      .getElementsByTagName("a")[0]
-      .getElementsByTagName("img")[0].src;
-    let image =
-      "https://media.discordapp.net/attachments/954072013935374416/954447249339981854/20210114-074634-2046-2.jpg";
-    image = await fetch(imageLink).then((res) => {
-      res.body.pipe(fs.createWriteStream("./db/images.png"));
-    });
-    console.log(imageLink);
-
-    // !                        Fal Audio!
-    let audio = audios[randomAudio]
-      .getElementsByTagName("audio")[0]
-      .getElementsByTagName("source")[0].src;
-    console.log(audio);
     if (interaction.db.language === "en") {
       const translatePoem = await axios.post(
         config.bot.api,
@@ -113,7 +69,7 @@ module.exports = {
               },
             ],
             image: {
-              url: image,
+              url: "https://media.discordapp.net/attachments/954072013935374416/954447249339981854/20210114-074634-2046-2.jpg",
             },
             footer: {
               text: "Fal Hafez | " + config.bot.version,
@@ -143,8 +99,7 @@ module.exports = {
               },
             ],
             image: {
-              // TODO not displaying!
-              url: "./db/image.png",
+              url: "https://media.discordapp.net/attachments/954072013935374416/954447249339981854/20210114-074634-2046-2.jpg",
             },
             footer: {
               text: "Fal Hafez | " + config.bot.version,
@@ -152,7 +107,6 @@ module.exports = {
           },
         ],
       });
-      interaction.followUp({ content: imageLink });
     }
 
     let current = interaction.db.usage?.fal || 0;

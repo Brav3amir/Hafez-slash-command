@@ -7,11 +7,13 @@ module.exports = {
   run: async (i) => {
     if (!i.isCommand()) return;
 
-    delete require.cache[require.resolve(`../../db/server/${i.guild.id}.json`)];
+    delete require.cache[
+      require.resolve(`../../db/server/${i.guild?.id || "000"}.json`)
+    ];
 
     const commandCheck = i.client.commands.get(i.commandName);
     // if (fs.existsSync(`../../db/server/${i.guild.id}.json`)) {
-    i.db = require(`../../db/server/${i.guild.id}.json`);
+    i.db = require(`../../db/server/${i.guild?.id || "000"}.json`);
     // } else {
     //   i.db = { language: "fa" };
     // }

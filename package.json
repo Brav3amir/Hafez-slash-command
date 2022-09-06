@@ -1,14 +1,14 @@
 {
-  "name": "slash-handler",
-  "version": "1.0.0",
+  "name": "fal-hafez",
+  "version": "1.2.2",
   "description": "Discord.js V13 Slash Commands Handler",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Ludho-Brav3amir",
+  "license": "MIT",
   "dependencies": {
     "@discordjs/builders": "^0.6.0",
     "@discordjs/rest": "^0.1.0-canary.0",
@@ -29,5 +29,13 @@
   },
   "optionalDependencies": {
     "bufferutil": "^4.0.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Brav3amir/Hafez-slash-command.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Brav3amir/Hafez-slash-command/issues"
+  },
+  "homepage": "https://github.com/Brav3amir/Hafez-slash-command#readme"
 }

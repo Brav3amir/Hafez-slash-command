@@ -8,28 +8,25 @@ module.exports = {
     .setDescription("hafez picture"),
   run: async (interaction) => {
     await interaction.deferReply();
-    var number_random = Math.floor(Math.random() * 495);
 
     let getInfo = async () => {
-      let response = await axios.get(`https://c.ganjoor.net/beyt-json.php?p=2`);
+      let response = await axios.post(
+        `https://ludho.xyz/api?fal`,
+        {},
+        { headers: { "api-key": "c816aefcece3f82a1204" } }
+      );
       let info = response.data;
+
       return info;
     };
     let data = await getInfo();
 
-    let poem = `${data.m1} \n ${data.m2}`;
+    let poem = `> ${data[0]} \n> ${data[1]}`;
+    let number = data.number;
 
-    let replies_ = [
-      "https://cdn.discordapp.com/attachments/760896469023850588/832576634489929728/782482961-talab-org.jpg",
-      "https://cdn.discordapp.com/attachments/760896469023850588/832576633667715112/1.jpg",
-      "https://cdn.discordapp.com/attachments/760896469023850588/832576633901678602/b5759593fdad5a8d.jpg",
-      "https://cdn.discordapp.com/attachments/760896469023850588/832576634078625832/ef6cdaaf78ea9696.jpg",
-      "https://cdn.discordapp.com/attachments/760896469023850588/832576634279428136/Hamgardi_0349zvzbc89_resize.jpg",
-      "https://cdn.discordapp.com/attachments/760896469023850588/832577287551451177/1660401.jpg",
-      "https://cdn.discordapp.com/attachments/760896469023850588/832577287693533194/e67ebce5d3751d45.png",
-    ];
+    let replies_ = data.images;
 
-    var num_ = Math.floor(Math.random() * 7);
+    let num_ = Math.floor(Math.random() * data.images.length);
     let image = replies_[num_];
 
     if (interaction.db.language === "en") {
@@ -51,7 +48,7 @@ module.exports = {
         embeds: [
           {
             color: "#fffff0",
-            description: ` **Hafez Picture (${number_random})** <:Book_orange:950368110756642828>`,
+            description: ` **Hafez Picture (${number})** <:Book_orange:950368110756642828>`,
             fields: [
               {
                 name: "**<:Book_red:950368086467436594> Poem :**",
@@ -72,15 +69,15 @@ module.exports = {
         embeds: [
           {
             color: "#fffff0",
-            description: `**(${number_random}) عکس حافظ** <:Book_orange:950368110756642828>`,
+            description: `**(${number}) عکس حافظ** <:Book_orange:950368110756642828>`,
             fields: [
               {
                 name: "**: شعر <:Book_red:950368086467436594>**",
-                value: `> ${poem}`,
+                value: `${poem}`,
               },
               {
                 name: `${data.poet}`,
-                value: `[خواندن ادامه](${data.url})`,
+                value: `[خواندن ادامه](${data.address})`,
               },
             ],
             image: {

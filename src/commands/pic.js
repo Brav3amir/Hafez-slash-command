@@ -21,7 +21,7 @@ module.exports = {
     };
     let data = await getInfo();
 
-    let poem = `> ${data[0]} \n> ${data[1]}`;
+    let poem = `> ${data.poem[0]} \n> ${data.poem[1]}`;
     let number = data.number;
 
     let replies_ = data.images;
@@ -76,7 +76,7 @@ module.exports = {
                 value: `${poem}`,
               },
               {
-                name: `${data.poet}`,
+                name: `حافظ شیرازی`,
                 value: `[خواندن ادامه](${data.address})`,
               },
             ],

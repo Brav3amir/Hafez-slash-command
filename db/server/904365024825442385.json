@@ -1,3 +1,7 @@
 {
-  "language": "fa"
+  "language": "fa",
+  "usage": {
+    "invite": 4,
+    "help": 1
+  }
 }

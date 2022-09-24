@@ -1,8 +1,10 @@
 {
   "language": "fa",
   "usage": {
-    "fal": 10,
+    "fal": 85,
     "help": 1,
-    "botinfo": 1
+    "botinfo": 4,
+    "ghazal": 2,
+    "pic": 3
   }
 }
